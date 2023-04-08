@@ -13,10 +13,10 @@ app.get('/', (req, res) => {
     res.send("I am running as the server site of ZUSS Chat translator server")
 })
 
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    next();
-  });
+// app.use((req, res, next) => {
+//     res.setHeader('Access-Control-Allow-Origin', '*');
+//     next();
+//   });
 
 const { Configuration, OpenaAIApi, OpenAIApi } = require("openai");
 const configuration = new Configuration({
