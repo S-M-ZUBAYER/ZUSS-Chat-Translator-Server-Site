@@ -36,7 +36,7 @@ app.post("/translate", async(req, res) => {
     if (!text || !target) {
         return res.status(400).json({ error: "please filled you data" });
     }
-    const trans = `(Please don't thing deeply just translate) ${text} (please translate into ${target})`
+    const trans = `(Please don't think deeply just translate) ${text} (please translate into ${target})`
 
     const response =  await openai.createChatCompletion({
           model: "gpt-3.5-turbo",
